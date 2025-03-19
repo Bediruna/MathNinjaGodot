@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b8kxk53u1cavv"]
 
-[ext_resource type="Script" uid="uid://cuvuyjklswqs2" path="res://scripts/PlayerMovement.cs/PlayerMovement.cs" id="1_d2wvv"]
+[ext_resource type="Script" uid="uid://df7s18jgmkeq0" path="res://scripts/PlayerMovement.cs" id="1_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://cwmjcnqv7473g" path="res://assets/ninjasprite/Run__000.png" id="1_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://o0a04hod4kn8" path="res://assets/ninjasprite/Run__001.png" id="2_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://cuam66k467qke" path="res://assets/ninjasprite/Run__002.png" id="3_3v2ag"]

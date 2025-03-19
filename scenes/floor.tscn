@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cr2is8syw1gij"]
 
 [ext_resource type="Texture2D" uid="uid://lkided786mx4" path="res://assets/bg/layer0.PNG" id="1_ukw5w"]
-[ext_resource type="Script" uid="uid://byxp411wgns3f" path="res://scenes/FloorSpawner.cs" id="2_kuqtn"]
+[ext_resource type="Script" uid="uid://cxujr1b2u0tmj" path="res://scripts/FloorSpawner.cs" id="2_kuqtn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ukw5w"]
 distance = -251.0
