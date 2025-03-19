@@ -6,33 +6,56 @@ public partial class PlayerMovement : CharacterBody2D
 	public const float JumpVelocity = -500.0f;
 
 	private AnimatedSprite2D animatedSprite;
+	private bool isAttacking = false;
 
 	public override void _Ready()
 	{
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		animatedSprite.AnimationFinished += OnAnimationFinished;
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-
 		// Apply gravity
 		velocity += GetGravity() * (float)delta;
 
-		// Play jump animation once when jumping
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		// Play attack animation if not already attacking
+		if (Input.IsActionJustPressed("attack") && !isAttacking)
 		{
-			velocity.Y = JumpVelocity;
-			animatedSprite.Play("jump");
+			animatedSprite.Play("attack");
+			isAttacking = true;
 		}
-		else if (IsOnFloor())
+		else if (!isAttacking)
 		{
-			animatedSprite.Play("run");
+			if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+			{
+				velocity.Y = JumpVelocity;
+				animatedSprite.Play("jump");
+			}
+			else if (IsOnFloor())
+			{
+				animatedSprite.Play("run");
+			}
 		}
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	private void OnAnimationFinished()
+	{
+		// Check if it was the attack animation that just finished
+		if (animatedSprite.Animation == "attack")
+		{
+			isAttacking = false;
+
+			// Auto-switch back to run if still on floor
+			if (IsOnFloor())
+			{
+				animatedSprite.Play("run");
+			}
+		}
 	}
 }

@@ -2,7 +2,7 @@ using Godot;
 
 public partial class BgManager : Node2D
 {
-	[Export] public float BaseScrollSpeed = 300f;
+	[Export] public float BaseScrollSpeed = 100f;
 	private Sprite2D[] _layers;
 	private Sprite2D[] _layersDuplicates;
 	private float[] _layerWidths;

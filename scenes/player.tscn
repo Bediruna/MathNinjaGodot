@@ -1,29 +1,74 @@
-[gd_scene load_steps=24 format=3 uid="uid://b8kxk53u1cavv"]
+[gd_scene load_steps=34 format=3 uid="uid://b8kxk53u1cavv"]
 
 [ext_resource type="Script" uid="uid://df7s18jgmkeq0" path="res://scripts/PlayerMovement.cs" id="1_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://cwmjcnqv7473g" path="res://assets/ninjasprite/Run__000.png" id="1_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://o0a04hod4kn8" path="res://assets/ninjasprite/Run__001.png" id="2_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://dwqurvkapvi84" path="res://assets/ninjasprite/Jump__000.png" id="2_i4ail"]
+[ext_resource type="Texture2D" uid="uid://biilg3ix2xwy7" path="res://assets/ninjasprite/Attack__000.png" id="2_wnwbv"]
 [ext_resource type="Texture2D" uid="uid://cuam66k467qke" path="res://assets/ninjasprite/Run__002.png" id="3_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://ij27gk2ysvpo" path="res://assets/ninjasprite/Jump__001.png" id="3_a38lo"]
+[ext_resource type="Texture2D" uid="uid://brvfny5sj8n6a" path="res://assets/ninjasprite/Attack__001.png" id="3_gl8cc"]
 [ext_resource type="Texture2D" uid="uid://bimenfxwcbpvd" path="res://assets/ninjasprite/Jump__002.png" id="4_4ni07"]
+[ext_resource type="Texture2D" uid="uid://c6bxaescobqpv" path="res://assets/ninjasprite/Attack__002.png" id="4_487ah"]
 [ext_resource type="Texture2D" uid="uid://xvsj16ugk86j" path="res://assets/ninjasprite/Run__003.png" id="4_jej6c"]
 [ext_resource type="Texture2D" uid="uid://cdrhk23w2uew2" path="res://assets/ninjasprite/Run__004.png" id="5_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://cdvi4hvt8kfxs" path="res://assets/ninjasprite/Jump__003.png" id="5_l71n6"]
+[ext_resource type="Texture2D" uid="uid://b8f4aqumijfge" path="res://assets/ninjasprite/Attack__003.png" id="5_md1ol"]
+[ext_resource type="Texture2D" uid="uid://blphceuk7hsl5" path="res://assets/ninjasprite/Attack__004.png" id="6_bj30b"]
 [ext_resource type="Texture2D" uid="uid://eqvovlysg0qx" path="res://assets/ninjasprite/Jump__004.png" id="6_ke2ow"]
 [ext_resource type="Texture2D" uid="uid://dpxwgpcq5dkim" path="res://assets/ninjasprite/Run__005.png" id="6_oprun"]
 [ext_resource type="Texture2D" uid="uid://bkdxx5poh1a4x" path="res://assets/ninjasprite/Run__006.png" id="7_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://up85c1pb3xty" path="res://assets/ninjasprite/Attack__005.png" id="7_jc3p3"]
 [ext_resource type="Texture2D" uid="uid://bd7soopmpkdv" path="res://assets/ninjasprite/Jump__005.png" id="7_ujl30"]
 [ext_resource type="Texture2D" uid="uid://cr456nbiijk4q" path="res://assets/ninjasprite/Jump__006.png" id="8_31cv2"]
+[ext_resource type="Texture2D" uid="uid://babpxpnpg1xrx" path="res://assets/ninjasprite/Attack__006.png" id="8_hax0n"]
 [ext_resource type="Texture2D" uid="uid://cgsebd3dqs247" path="res://assets/ninjasprite/Run__007.png" id="8_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://cwd65gyme8h50" path="res://assets/ninjasprite/Run__008.png" id="9_fulsm"]
 [ext_resource type="Texture2D" uid="uid://cs0bug6icvdg7" path="res://assets/ninjasprite/Jump__007.png" id="9_pf23h"]
+[ext_resource type="Texture2D" uid="uid://cx3hpnpfvlvst" path="res://assets/ninjasprite/Attack__007.png" id="9_t4otl"]
 [ext_resource type="Texture2D" uid="uid://bkskcdavwga5l" path="res://assets/ninjasprite/Run__009.png" id="10_4r5pv"]
 [ext_resource type="Texture2D" uid="uid://3mn4kl1q4aaw" path="res://assets/ninjasprite/Jump__008.png" id="10_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://dkuiloipycpu5" path="res://assets/ninjasprite/Attack__008.png" id="10_j2b1d"]
+[ext_resource type="Texture2D" uid="uid://c5m3l0ddxybwh" path="res://assets/ninjasprite/Attack__009.png" id="11_cs1tg"]
 [ext_resource type="Texture2D" uid="uid://xwsdqqn8im5s" path="res://assets/ninjasprite/Jump__009.png" id="11_wqfne"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60mlk"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wnwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gl8cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_487ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_md1ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bj30b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jc3p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hax0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t4otl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2b1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cs1tg")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_i4ail")
@@ -104,7 +149,7 @@ script = ExtResource("1_d2wvv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_60mlk")
-animation = &"jump"
+animation = &"attack"
 autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
