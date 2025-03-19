@@ -2,7 +2,7 @@ using Godot;
 
 public partial class FloorManager : Node2D
 {
-	[Export] public float ScrollSpeed = 200f;
+	[Export] public float ScrollSpeed = 500f;
 	private Sprite2D _floorTexture1;
 	private Sprite2D _floorTexture2;
 	private float _textureWidth;
