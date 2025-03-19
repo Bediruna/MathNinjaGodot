@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Common ignores
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+*.import
+*.log
+.mono/
