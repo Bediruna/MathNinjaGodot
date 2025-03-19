@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://h0scm4hsexit"]
+
+[ext_resource type="Texture2D" uid="uid://bt2mmhb6qq617" path="res://assets/bg/layer1.PNG" id="1_dpp0m"]
+[ext_resource type="Script" uid="uid://do7bux6bhnnoe" path="res://scripts/BgManager.cs" id="1_j28yk"]
+[ext_resource type="Texture2D" uid="uid://c46i667vrwyuy" path="res://assets/bg/layer8.PNG" id="1_qd2e1"]
+[ext_resource type="Texture2D" uid="uid://2whfrqi4ilc8" path="res://assets/bg/layer2.PNG" id="2_qd2e1"]
+[ext_resource type="Texture2D" uid="uid://ctio1f2r124j" path="res://assets/bg/layer3.PNG" id="3_4la4c"]
+[ext_resource type="Texture2D" uid="uid://cwdd3h4v1332q" path="res://assets/bg/layer4.PNG" id="4_j28yk"]
+[ext_resource type="Texture2D" uid="uid://byprut1q7b75j" path="res://assets/bg/layer5.PNG" id="5_we8gc"]
+[ext_resource type="Texture2D" uid="uid://chiileyje8hil" path="res://assets/bg/layer6.PNG" id="6_u8vpk"]
+[ext_resource type="Texture2D" uid="uid://k60je7ndkj2e" path="res://assets/bg/layer7.PNG" id="7_4183b"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_j28yk")
+
+[node name="layer1" type="Sprite2D" parent="."]
+z_index = 7
+texture = ExtResource("1_dpp0m")
+
+[node name="layer2" type="Sprite2D" parent="."]
+z_index = 6
+texture = ExtResource("2_qd2e1")
+
+[node name="layer3" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("3_4la4c")
+
+[node name="layer4" type="Sprite2D" parent="."]
+z_index = 4
+texture = ExtResource("4_j28yk")
+
+[node name="layer5" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("5_we8gc")
+
+[node name="layer6" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("6_u8vpk")
+
+[node name="layer7" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("7_4183b")
+
+[node name="layer8" type="Sprite2D" parent="."]
+texture = ExtResource("1_qd2e1")
