@@ -6,6 +6,8 @@ public partial class PlayManager : Node2D
 	private Label problemLabel;
 	private PackedScene enemyScene;
 	private Timer spawnTimer;
+	
+	private int correctAnswer;
 
 	public override void _Ready()
 	{
@@ -21,29 +23,30 @@ public partial class PlayManager : Node2D
 		AddChild(spawnTimer);
 
 		// Connect the timeout signal
-		spawnTimer.Timeout += OnSpawnTimerTimeout;
+		spawnTimer.Timeout += SpawnEnemy;
 	}
 
-	public override void _Process(double delta)
+	private void GenerateNewProblem()
 	{
-		problemLabel.Text = "32 + 32";
+		// Generate two numbers for a simple addition
+		int a = GD.RandRange(10, 50);
+		int b = GD.RandRange(10, 50);
+
+		correctAnswer = a + b;
+		problemLabel.Text = $"{a} + {b}";
 	}
 
-	private void OnSpawnTimerTimeout()
+	private void SpawnEnemy()
 	{
-		// Example: spawn at a random position
-		Vector2 spawnPos = new Vector2(
-			GD.RandRange(100, 500),
-			GD.RandRange(100, 400)
-		);
+		var enemyInstance = enemyScene.Instantiate<EnemyMovement>();
+		enemyInstance.Position = new Vector2(1000, 150);
 
-		SpawnEnemy(spawnPos);
-	}
+		enemyInstance._Ready();
+		// Generate a random value
+		int randomValue = GD.RandRange(10, 99);
+		enemyInstance.SetLabelValue(randomValue.ToString());
 
-	private void SpawnEnemy(Vector2 spawnPosition)
-	{
-		Node2D enemyInstance = enemyScene.Instantiate<Node2D>();
-		enemyInstance.Position = spawnPosition;
 		AddChild(enemyInstance);
 	}
+
 }

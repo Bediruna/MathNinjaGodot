@@ -5,7 +5,7 @@ public partial class EnemyMovement : CharacterBody2D
 {
 	public const float Gravity = 980.0f;
 
-	private Label _enemyLabel;
+	public Label _enemyLabel;
 	private AnimatedSprite2D _animatedSprite;
 	private bool _isDead = false;
 
@@ -15,8 +15,7 @@ public partial class EnemyMovement : CharacterBody2D
 	public override void _Ready()
 	{
 		_enemyLabel = GetNode<Label>("Label");
-		_enemyLabel.Text = "64";
-
+		
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		_animatedSprite.AnimationFinished += OnAnimationFinished;
 	}
@@ -48,10 +47,6 @@ public partial class EnemyMovement : CharacterBody2D
 			return;
 
 		_isDead = true;
-		//Velocity = Vector2.Zero;
-		//_velocity = Vector2.Zero;
-
-		//_enemyLabel.Text = "DEAD";
 
 		_animatedSprite.Play("death");
 	}
@@ -63,4 +58,10 @@ public partial class EnemyMovement : CharacterBody2D
 			QueueFree();
 		}
 	}
+	public void SetLabelValue(string value)
+	{
+		if (_enemyLabel != null)
+			_enemyLabel.Text = value;
+	}
+
 }
