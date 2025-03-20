@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bur2xsqr8plvu"]
+[gd_scene load_steps=6 format=3 uid="uid://bur2xsqr8plvu"]
 
 [ext_resource type="Script" uid="uid://cf574rptrkxm3" path="res://scripts/PlayManager.cs" id="1_kdvgv"]
 [ext_resource type="PackedScene" uid="uid://h0scm4hsexit" path="res://scenes/bg.tscn" id="1_que2y"]
 [ext_resource type="PackedScene" uid="uid://cr2is8syw1gij" path="res://scenes/floor.tscn" id="2_kdvgv"]
 [ext_resource type="PackedScene" uid="uid://b8kxk53u1cavv" path="res://scenes/player.tscn" id="3_ief5h"]
+[ext_resource type="PackedScene" uid="uid://b5w8a1vuxgkxq" path="res://scenes/gray_slime.tscn" id="5_ief5h"]
 
 [node name="PlayScene" type="Node2D"]
 script = ExtResource("1_kdvgv")
@@ -34,3 +35,6 @@ z_index = 8
 [node name="Player" parent="." instance=ExtResource("3_ief5h")]
 z_index = 7
 position = Vector2(0, 80)
+
+[node name="GraySlime" parent="." instance=ExtResource("5_ief5h")]
+position = Vector2(500, 100)

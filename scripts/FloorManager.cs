@@ -2,7 +2,6 @@ using Godot;
 
 public partial class FloorManager : Node2D
 {
-	[Export] public float ScrollSpeed = 500f;
 	private Sprite2D _floorTexture1;
 	private Sprite2D _floorTexture2;
 	private float _textureWidth;
@@ -20,7 +19,7 @@ public partial class FloorManager : Node2D
 
 	public override void _Process(double delta)
 	{
-		float movement = ScrollSpeed * (float)delta;
+		float movement = GameSettings.GameSpeed * (float)delta;
 
 		_floorTexture1.Position -= new Vector2(movement, 0);
 		_floorTexture2.Position -= new Vector2(movement, 0);

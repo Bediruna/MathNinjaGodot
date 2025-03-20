@@ -3,15 +3,18 @@ using System;
 
 public partial class PlayerMovement : CharacterBody2D
 {
-	public const float JumpVelocity = -500.0f;
+	public const float JumpVelocity = -600.0f;
 
 	private AnimatedSprite2D animatedSprite;
+	private Area2D attackHitbox;
+
 	private bool isAttacking = false;
 
 	public override void _Ready()
 	{
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		animatedSprite.AnimationFinished += OnAnimationFinished;
+		attackHitbox = GetNode<Area2D>("AttackHitbox");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -26,6 +29,15 @@ public partial class PlayerMovement : CharacterBody2D
 		{
 			animatedSprite.Play("attack");
 			isAttacking = true;
+			
+			// Check for enemies in hitbox immediately
+			foreach (var body in attackHitbox.GetOverlappingBodies())
+			{
+				if (body is EnemyMovement enemy)
+				{
+					enemy.PlayDeath();
+				}
+			}
 		}
 		else if (!isAttacking)
 		{

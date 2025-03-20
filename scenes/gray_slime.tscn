@@ -1,0 +1,99 @@
+[gd_scene load_steps=13 format=3 uid="uid://b5w8a1vuxgkxq"]
+
+[ext_resource type="Texture2D" uid="uid://2rkr2vaueelh" path="res://assets/Slimes/LargeSlime_Grey.png" id="1_sg466"]
+[ext_resource type="Script" uid="uid://c6hncni3mwrtt" path="res://scripts/EnemyMovement.cs" id="2_axiuq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axiuq"]
+atlas = ExtResource("1_sg466")
+region = Rect2(0, 930, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujtkv"]
+atlas = ExtResource("1_sg466")
+region = Rect2(310, 930, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prmd6"]
+atlas = ExtResource("1_sg466")
+region = Rect2(620, 930, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0qcp"]
+atlas = ExtResource("1_sg466")
+region = Rect2(930, 930, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys8oo"]
+atlas = ExtResource("1_sg466")
+region = Rect2(0, 620, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hjcc"]
+atlas = ExtResource("1_sg466")
+region = Rect2(310, 620, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sged3"]
+atlas = ExtResource("1_sg466")
+region = Rect2(620, 620, 310, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpg06"]
+atlas = ExtResource("1_sg466")
+region = Rect2(930, 620, 310, 310)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ys8oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axiuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujtkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prmd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0qcp")
+}],
+"loop": false,
+"name": &"death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys8oo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hjcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sged3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpg06")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_axiuq"]
+radius = 39.0128
+
+[node name="GraySlime" type="CharacterBody2D"]
+z_index = 6
+script = ExtResource("2_axiuq")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = -30.0
+offset_top = -10.0
+offset_right = 44.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 65
+text = "80"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_ys8oo")
+animation = &"death"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-38, 38)
+shape = SubResource("CircleShape2D_axiuq")

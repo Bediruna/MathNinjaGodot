@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b8kxk53u1cavv"]
+[gd_scene load_steps=35 format=3 uid="uid://b8kxk53u1cavv"]
 
 [ext_resource type="Script" uid="uid://df7s18jgmkeq0" path="res://scripts/PlayerMovement.cs" id="1_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://cwmjcnqv7473g" path="res://assets/ninjasprite/Run__000.png" id="1_y4r1p"]
@@ -48,9 +48,6 @@ animations = [{
 "texture": ExtResource("5_md1ol")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_bj30b")
-}, {
-"duration": 1.0,
 "texture": ExtResource("7_jc3p3")
 }, {
 "duration": 1.0,
@@ -64,6 +61,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_cs1tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bj30b")
 }],
 "loop": false,
 "name": &"attack",
@@ -140,10 +140,13 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2wvv"]
-size = Vector2(114, 224)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wnwbv"]
+radius = 94.1913
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnwbv"]
+size = Vector2(135.465, 88.789)
+
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_d2wvv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -151,8 +154,16 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_60mlk")
 animation = &"attack"
 autoplay = "run"
+frame = 9
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-18, 49)
+position = Vector2(-60, 44)
 scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_d2wvv")
+shape = SubResource("CircleShape2D_wnwbv")
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(66.2674, 38)
+shape = SubResource("RectangleShape2D_wnwbv")
