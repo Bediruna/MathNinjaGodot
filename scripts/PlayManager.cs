@@ -24,6 +24,8 @@ public partial class PlayManager : Node2D
 
 		// Connect the timeout signal
 		spawnTimer.Timeout += SpawnEnemy;
+		
+		GenerateNewProblem();
 	}
 
 	private void GenerateNewProblem()
@@ -43,7 +45,8 @@ public partial class PlayManager : Node2D
 
 		enemyInstance._Ready();
 		// Generate a random value
-		int randomValue = GD.RandRange(10, 99);
+		int randomValue = GD.RandRange(0, 3);
+		randomValue += correctAnswer;
 		enemyInstance.SetLabelValue(randomValue.ToString());
 
 		AddChild(enemyInstance);

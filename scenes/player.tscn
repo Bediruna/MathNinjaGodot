@@ -1,36 +1,39 @@
-[gd_scene load_steps=35 format=3 uid="uid://b8kxk53u1cavv"]
+[gd_scene load_steps=36 format=3 uid="uid://b8kxk53u1cavv"]
 
 [ext_resource type="Script" uid="uid://df7s18jgmkeq0" path="res://scripts/PlayerMovement.cs" id="1_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://cwmjcnqv7473g" path="res://assets/ninjasprite/Run__000.png" id="1_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://o0a04hod4kn8" path="res://assets/ninjasprite/Run__001.png" id="2_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://dwqurvkapvi84" path="res://assets/ninjasprite/Jump__000.png" id="2_i4ail"]
-[ext_resource type="Texture2D" uid="uid://biilg3ix2xwy7" path="res://assets/ninjasprite/Attack__000.png" id="2_wnwbv"]
-[ext_resource type="Texture2D" uid="uid://cuam66k467qke" path="res://assets/ninjasprite/Run__002.png" id="3_3v2ag"]
-[ext_resource type="Texture2D" uid="uid://ij27gk2ysvpo" path="res://assets/ninjasprite/Jump__001.png" id="3_a38lo"]
-[ext_resource type="Texture2D" uid="uid://brvfny5sj8n6a" path="res://assets/ninjasprite/Attack__001.png" id="3_gl8cc"]
-[ext_resource type="Texture2D" uid="uid://bimenfxwcbpvd" path="res://assets/ninjasprite/Jump__002.png" id="4_4ni07"]
-[ext_resource type="Texture2D" uid="uid://c6bxaescobqpv" path="res://assets/ninjasprite/Attack__002.png" id="4_487ah"]
-[ext_resource type="Texture2D" uid="uid://xvsj16ugk86j" path="res://assets/ninjasprite/Run__003.png" id="4_jej6c"]
-[ext_resource type="Texture2D" uid="uid://cdrhk23w2uew2" path="res://assets/ninjasprite/Run__004.png" id="5_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://cdvi4hvt8kfxs" path="res://assets/ninjasprite/Jump__003.png" id="5_l71n6"]
-[ext_resource type="Texture2D" uid="uid://b8f4aqumijfge" path="res://assets/ninjasprite/Attack__003.png" id="5_md1ol"]
-[ext_resource type="Texture2D" uid="uid://blphceuk7hsl5" path="res://assets/ninjasprite/Attack__004.png" id="6_bj30b"]
-[ext_resource type="Texture2D" uid="uid://eqvovlysg0qx" path="res://assets/ninjasprite/Jump__004.png" id="6_ke2ow"]
-[ext_resource type="Texture2D" uid="uid://dpxwgpcq5dkim" path="res://assets/ninjasprite/Run__005.png" id="6_oprun"]
-[ext_resource type="Texture2D" uid="uid://bkdxx5poh1a4x" path="res://assets/ninjasprite/Run__006.png" id="7_a8ls1"]
-[ext_resource type="Texture2D" uid="uid://up85c1pb3xty" path="res://assets/ninjasprite/Attack__005.png" id="7_jc3p3"]
-[ext_resource type="Texture2D" uid="uid://bd7soopmpkdv" path="res://assets/ninjasprite/Jump__005.png" id="7_ujl30"]
-[ext_resource type="Texture2D" uid="uid://cr456nbiijk4q" path="res://assets/ninjasprite/Jump__006.png" id="8_31cv2"]
-[ext_resource type="Texture2D" uid="uid://babpxpnpg1xrx" path="res://assets/ninjasprite/Attack__006.png" id="8_hax0n"]
-[ext_resource type="Texture2D" uid="uid://cgsebd3dqs247" path="res://assets/ninjasprite/Run__007.png" id="8_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://cwd65gyme8h50" path="res://assets/ninjasprite/Run__008.png" id="9_fulsm"]
-[ext_resource type="Texture2D" uid="uid://cs0bug6icvdg7" path="res://assets/ninjasprite/Jump__007.png" id="9_pf23h"]
-[ext_resource type="Texture2D" uid="uid://cx3hpnpfvlvst" path="res://assets/ninjasprite/Attack__007.png" id="9_t4otl"]
-[ext_resource type="Texture2D" uid="uid://bkskcdavwga5l" path="res://assets/ninjasprite/Run__009.png" id="10_4r5pv"]
-[ext_resource type="Texture2D" uid="uid://3mn4kl1q4aaw" path="res://assets/ninjasprite/Jump__008.png" id="10_dt7fs"]
-[ext_resource type="Texture2D" uid="uid://dkuiloipycpu5" path="res://assets/ninjasprite/Attack__008.png" id="10_j2b1d"]
-[ext_resource type="Texture2D" uid="uid://c5m3l0ddxybwh" path="res://assets/ninjasprite/Attack__009.png" id="11_cs1tg"]
-[ext_resource type="Texture2D" uid="uid://xwsdqqn8im5s" path="res://assets/ninjasprite/Jump__009.png" id="11_wqfne"]
+[ext_resource type="Texture2D" uid="uid://dnatkuy40ij4t" path="res://assets/ninjasprite/Run__000.png" id="1_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://ci24fudx3j1nt" path="res://assets/ninjasprite/Run__001.png" id="2_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://cgux53pki87kk" path="res://assets/ninjasprite/Jump__000.png" id="2_i4ail"]
+[ext_resource type="Texture2D" uid="uid://cigqe8t2sd1bv" path="res://assets/ninjasprite/Attack__000.png" id="2_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://fyk1lthgdasx" path="res://assets/ninjasprite/Run__002.png" id="3_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://r65uyfeimdud" path="res://assets/ninjasprite/Jump__001.png" id="3_a38lo"]
+[ext_resource type="Texture2D" uid="uid://c6svfpjnfqv6c" path="res://assets/ninjasprite/Attack__001.png" id="3_gl8cc"]
+[ext_resource type="Texture2D" uid="uid://bgwe6rvuvyc2g" path="res://assets/ninjasprite/Jump__002.png" id="4_4ni07"]
+[ext_resource type="Texture2D" uid="uid://bo1sn2lw42aw4" path="res://assets/ninjasprite/Attack__002.png" id="4_487ah"]
+[ext_resource type="Texture2D" uid="uid://c2ccs71v0gt7w" path="res://assets/ninjasprite/Run__003.png" id="4_jej6c"]
+[ext_resource type="Texture2D" uid="uid://b6j8ejb5fo4r8" path="res://assets/ninjasprite/Run__004.png" id="5_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://dic0x3vulf8c1" path="res://assets/ninjasprite/Jump__003.png" id="5_l71n6"]
+[ext_resource type="Texture2D" uid="uid://bgy7o43gs6v8p" path="res://assets/ninjasprite/Attack__003.png" id="5_md1ol"]
+[ext_resource type="Texture2D" uid="uid://c7t4hh3qmmtio" path="res://assets/ninjasprite/Attack__004.png" id="6_bj30b"]
+[ext_resource type="Texture2D" uid="uid://cemmv5uvfjskt" path="res://assets/ninjasprite/Jump__004.png" id="6_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://bvaeha34ek8jf" path="res://assets/ninjasprite/Run__005.png" id="6_oprun"]
+[ext_resource type="Texture2D" uid="uid://dyue0lxb64uv6" path="res://assets/ninjasprite/Run__006.png" id="7_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://c7fvc3gue206v" path="res://assets/ninjasprite/Attack__005.png" id="7_jc3p3"]
+[ext_resource type="Texture2D" uid="uid://dgjwrvvyggx5g" path="res://assets/ninjasprite/Jump__005.png" id="7_ujl30"]
+[ext_resource type="Texture2D" uid="uid://bx5v4vjtvxxw4" path="res://assets/ninjasprite/Jump__006.png" id="8_31cv2"]
+[ext_resource type="Texture2D" uid="uid://dnvpqlvqysm6y" path="res://assets/ninjasprite/Attack__006.png" id="8_hax0n"]
+[ext_resource type="Texture2D" uid="uid://dfj6wwcddlwmp" path="res://assets/ninjasprite/Run__007.png" id="8_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://bafhsm5c5voym" path="res://assets/ninjasprite/Run__008.png" id="9_fulsm"]
+[ext_resource type="Texture2D" uid="uid://bbpj3pauu78hr" path="res://assets/ninjasprite/Jump__007.png" id="9_pf23h"]
+[ext_resource type="Texture2D" uid="uid://j18rss33s2is" path="res://assets/ninjasprite/Attack__007.png" id="9_t4otl"]
+[ext_resource type="Texture2D" uid="uid://dlpa1co35e5h" path="res://assets/ninjasprite/Run__009.png" id="10_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://ctgwmwsg7ng3k" path="res://assets/ninjasprite/Jump__008.png" id="10_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://blq42bvqtndtq" path="res://assets/ninjasprite/Attack__008.png" id="10_j2b1d"]
+[ext_resource type="Texture2D" uid="uid://di2ah5j7rq2xk" path="res://assets/ninjasprite/Attack__009.png" id="11_cs1tg"]
+[ext_resource type="Texture2D" uid="uid://dw7mpyx16y43t" path="res://assets/ninjasprite/Jump__009.png" id="11_wqfne"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wnwbv"]
+radius = 94.1913
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_60mlk"]
 animations = [{
@@ -140,14 +143,19 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wnwbv"]
-radius = 94.1913
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl8cc"]
+size = Vector2(230, 242)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnwbv"]
 size = Vector2(135.465, 88.789)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_d2wvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-60, 44)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_wnwbv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -157,10 +165,12 @@ autoplay = "run"
 frame = 9
 frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-60, 44)
+[node name="Hurtbox" type="Area2D" parent="."]
 scale = Vector2(0.5, 0.5)
-shape = SubResource("CircleShape2D_wnwbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-100, 75)
+shape = SubResource("RectangleShape2D_gl8cc")
 
 [node name="AttackHitbox" type="Area2D" parent="."]
 

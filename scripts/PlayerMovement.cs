@@ -7,6 +7,8 @@ public partial class PlayerMovement : CharacterBody2D
 
 	private AnimatedSprite2D animatedSprite;
 	private Area2D attackHitbox;
+	
+	private Area2D hurtbox;
 
 	private bool isAttacking = false;
 
@@ -15,6 +17,9 @@ public partial class PlayerMovement : CharacterBody2D
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		animatedSprite.AnimationFinished += OnAnimationFinished;
 		attackHitbox = GetNode<Area2D>("AttackHitbox");
+		
+		hurtbox = GetNode<Area2D>("Hurtbox");
+		hurtbox.BodyEntered += OnHurtboxBodyEntered;
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -68,6 +73,15 @@ public partial class PlayerMovement : CharacterBody2D
 			{
 				animatedSprite.Play("run");
 			}
+		}
+	}
+	
+	private void OnHurtboxBodyEntered(Node2D body)
+	{
+		if (body is EnemyMovement enemy)
+		{
+			GD.Print("Player got hit by an enemy!");
+			// Optional: Play hurt animation, reduce health, etc.
 		}
 	}
 }
